@@ -6,6 +6,13 @@ const eventTest = (e) => {
     console.log("Evento Executado com sucesso");
 }
      
+const renderSomething = (x)=>{
+    if(x){
+        return <h1>Renderizando caso true</h1>
+    } else {
+        return <h1>Renderizando caso false</h1>
+    }
+}
 
   return (
     <div>
@@ -23,6 +30,8 @@ const eventTest = (e) => {
                 }
             }}>Clique aqui tbm por favor</button>
         </div>
+        {renderSomething(true)}
+        {renderSomething(false)}
     </div>
   )
 
