@@ -1,5 +1,6 @@
 import "./App.css";
 import Ash from "./assets/1150.png"
+import ManageData from "./components/ManageData";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <p>
         <b>Saindo das fundações e construindo as vigas de sustentação</b>
       </p>
+      <h1>Importando imagens no React</h1>
       {/* como chamar imagens na pasta public */}
       <p>Imagen importada da pasta public</p>
       <img src="/picachu1.png" alt="Picachu" />
@@ -17,6 +19,10 @@ function App() {
         <p>Imagem importada da pasta assets em src</p>
       <img src={Ash} alt="Ash" />
       </div>
+
+      <h1>UseState</h1>
+      <ManageData/>
+
     </div>
   );
 }
