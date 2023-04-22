@@ -3,6 +3,7 @@ import './App.css';
 import FristComponent from './components/FristComponent';
 import MyComponents from './components/MyComponents';
 import TemplateExpression from './components/TemplateExpression';
+import Events from './components/Events';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <MyComponents/>
       <FristComponent/>
       <TemplateExpression/>
-      
+      <Events/>
     </div>
   );
 }
