@@ -1,4 +1,5 @@
 import React from "react";
+import MyComponents from "./MyComponents";
 
 const TemplateExpression = () => {
   const name = "Sanderson";
@@ -13,6 +14,7 @@ const TemplateExpression = () => {
       <p>
         Vc atua como: {data.job} e tem {data.age} anos.
       </p>
+      <MyComponents/>
     </div>
   );
 };
