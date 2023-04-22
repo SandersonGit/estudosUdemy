@@ -1,5 +1,6 @@
 import "./App.css";
 import Ash from "./assets/1150.png"
+import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
 
       <h1>UseState</h1>
       <ManageData/>
+
+      <ListRender/>
 
     </div>
   );
