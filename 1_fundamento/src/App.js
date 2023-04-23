@@ -4,8 +4,10 @@ import CarDetails from "./components/CarDetails";
 
 import CondicionalRender from "./components/CondicionalRender";
 import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
+import Somar from "./components/Somar";
 import UserName from "./components/UserName";
 
 function App() {
@@ -14,6 +16,13 @@ function App() {
     { id: 2, marca: "Ford", cor: "preto", newCar: false, km: 1000 },
     { id: 3, marca: "Kia", cor: "amarelo", newCar: true, km: 0 },
   ];
+
+  function mostrarNome  () {
+    console.log("Evento do componente pai");
+  }
+  function somar (a, b) {
+    return a + b
+  }
 
   return (
     <div className="App">
@@ -44,6 +53,7 @@ function App() {
       {cars.map((car) => {
         return (
           <CarDetails
+            key={car.id}
             marca={car.marca}
             cor={car.cor}
             km={car.km}
@@ -57,6 +67,19 @@ function App() {
         <Container myValue="Meu teste de children">
           <p>Este é o meu conteúdo</p>
         </Container>
+
+
+        {/* Fonções pro props */}
+        <h1>Executando funções por props</h1>
+
+      <ExecuteFunction mostrarNome= {mostrarNome}/>
+      <Somar somar= {somar} />
+
+
+
+
+
+
     </div>
   );
 }
