@@ -1,5 +1,6 @@
 import "./App.css";
 import Ash from "./assets/1150.png"
+import CondicionalRender from "./components/CondicionalRender";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 
@@ -25,6 +26,8 @@ function App() {
       <ManageData/>
 
       <ListRender/>
+
+      <CondicionalRender/>
 
     </div>
   );
