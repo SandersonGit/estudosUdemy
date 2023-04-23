@@ -3,6 +3,7 @@ import Ash from "./assets/1150.png";
 import CarDetails from "./components/CarDetails";
 
 import CondicionalRender from "./components/CondicionalRender";
+import Container from "./components/Container";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 import UserName from "./components/UserName";
@@ -41,16 +42,23 @@ function App() {
       {/* loop em array de objetos */}
       <h1>Renderização com maps em array de objetos</h1>
       {cars.map((car) => {
-        return(
-        <CarDetails
-          marca={car.marca}
-          cor={car.cor}
-          km={car.km}
-          newCar={car.newCar}
-        />)
+        return (
+          <CarDetails
+            marca={car.marca}
+            cor={car.cor}
+            km={car.km}
+            newCar={car.newCar}
+          />
+        );
+
+      
       })}
+
+        <Container myValue="Meu teste de children">
+          <p>Este é o meu conteúdo</p>
+        </Container>
     </div>
   );
-    }
+}
 
 export default App;
