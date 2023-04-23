@@ -8,6 +8,7 @@ import ExecuteFunction from "./components/ExecuteFunction";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 import Somar from "./components/Somar";
+import UserDatails from "./components/UserDatails";
 import UserName from "./components/UserName";
 
 function App() {
@@ -23,6 +24,32 @@ function App() {
   function somar (a, b) {
     return a + b
   }
+
+
+  const users = [
+    {
+      id: 1,
+      nome: "Sanderson",
+      idade: "34",
+      profissao: "Vendedor"
+    },
+    {
+      id: 2,
+      nome: "Melanie",
+      idade: "32",
+      profissao: "Doméstica"
+    },
+    {
+      id: 3,
+      nome: "Cecilia",
+      idade: "9",
+      profissao: "Estudante"
+    }
+    
+  ]
+
+  console.log(users[0]);
+
 
   return (
     <div className="App">
@@ -75,7 +102,19 @@ function App() {
       <ExecuteFunction mostrarNome= {mostrarNome}/>
       <Somar somar= {somar} />
 
+      {users.map((user) => {
+        return (
+          <UserDatails
+            key={user.id}
+            nome={user.nome}
+            idade={user.idade}
+            profissão={user.profissao}
+            
+          />
+        );
 
+      
+      })}
 
 
 
