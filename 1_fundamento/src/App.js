@@ -1,16 +1,18 @@
 import "./App.css";
 import Ash from "./assets/1150.png";
 import CarDetails from "./components/CarDetails";
-import CasaDetail from "./components/CasaDetail";
+
 import CondicionalRender from "./components/CondicionalRender";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 import UserName from "./components/UserName";
 
 function App() {
-  const casaNome = "Augusta";
-  const casaMetragem = "100m";
-  const casaValor = 100.0;
+  const cars = [
+    { id: 1, marca: "Ferrari", cor: "vermelho", newCar: true, km: 0 },
+    { id: 2, marca: "Ford", cor: "preto", newCar: false, km: 1000 },
+    { id: 3, marca: "Kia", cor: "amarelo", newCar: true, km: 0 },
+  ];
 
   return (
     <div className="App">
@@ -36,9 +38,19 @@ function App() {
       <CarDetails marca="Ford" km={3.0} cor="Azul" newCar={false} />
       <CarDetails marca="Peugeot" km={0} cor="Vermelho" newCar={true} />
       <CarDetails marca="Toyota" km={45.0} cor="Branco" newCar={false} />
-      <CasaDetail nome={casaNome} metragem={casaMetragem} valor={casaValor} />
+      {/* loop em array de objetos */}
+      <h1>Renderização com maps em array de objetos</h1>
+      {cars.map((car) => {
+        return(
+        <CarDetails
+          marca={car.marca}
+          cor={car.cor}
+          km={car.km}
+          newCar={car.newCar}
+        />)
+      })}
     </div>
   );
-}
+    }
 
 export default App;
