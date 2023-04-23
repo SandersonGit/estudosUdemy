@@ -1,10 +1,15 @@
+
 import "./App.css";
 import Ash from "./assets/1150.png"
 import CondicionalRender from "./components/CondicionalRender";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
+import UserName from "./components/UserName";
 
 function App() {
+
+  
+
   return (
     <div className="App">
       <h1>Aprofundando em react</h1>{" "}
@@ -28,6 +33,8 @@ function App() {
       <ListRender/>
 
       <CondicionalRender/>
+
+      <UserName name= "Sanderson" age= "35"/>
 
     </div>
   );
