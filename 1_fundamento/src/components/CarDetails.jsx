@@ -1,6 +1,6 @@
 import React from "react";
 
-const CarDetails = ({ marca, km, cor, newCar }) => {
+const CarDetails = ({ marca, cor,  newCar, km}) => {
   return (
     <div>
         <h2>Detalhes do carro</h2>
